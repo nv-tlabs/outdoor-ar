@@ -1,0 +1,6 @@
+@inproceedings{wang2022neural,
+title = {Neural Light Field Estimation for Street Scenes with Differentiable Virtual Object Insertion}, 
+author = {Zian Wang and Wenzheng Chen and David Acuna and Jan Kautz and Sanja Fidler},
+booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+year = {2022}
+}

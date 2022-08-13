@@ -1,0 +1,495 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #1367a7;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+.paper-title {
+    padding: 16px 0px 16px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-6 {
+     width: 16.6%;
+     float: left;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.row, .author-row, .affil-row {
+     overflow: auto;
+}
+.author-row, .affil-row {
+    font-size: 20px;
+}
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 16px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    /*font-style: italic;*/
+    color: #666;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+video {
+    display: block;
+    margin: auto;
+}
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+
+.supp-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 150px;
+  font-weight: 600;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+.paper-btn:hover {
+    opacity: 0.85;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.venue {
+    color: #1367a7;
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.one {
+  position: relative;
+}
+
+.two {
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+
+</style>
+
+
+<div class="topnav" id="myTopnav">
+  <a href="https://www.nvidia.com/"><img width="100%" src="assets/nvidia.svg"></a>
+  <a href="https://nv-tlabs.github.io/" ><strong>Toronto AI Lab</strong></a>
+</div>
+
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+    <title>Neural Light Field Estimation for Street Scenes with Differentiable Virtual Object Insertion</title>
+    <meta property="og:description" content="Learning Indoor Inverse Rendering with 3D Spatially-Varying Lighting"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141699104-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141699104-1');
+    </script>
+</head>
+
+
+<body>
+<div class="container">
+    <div class="paper-title">
+        <h1>Neural Light Field Estimation for Street Scenes <br> with Differentiable Virtual Object Insertion </h1>
+    </div>
+    
+    <div id="authors">
+        <div class="author-row">
+            <div class="col-5 text-center"><a href="https://www.cs.toronto.edu/~zianwang/">Zian Wang</a><sup>1,2,3</sup></div>
+            <div class="col-5 text-center"><a href="https://www.cs.toronto.edu/~wenzheng/">Wenzheng Chen</a><sup>1,2,3</sup></div>
+            <div class="col-5 text-center"><a href="https://www.cs.toronto.edu/~davidj/">David Acuna</a><sup>1,2,3</sup></div>
+            <div class="col-5 text-center"><a href="https://jankautz.com">Jan Kautz</a><sup>1</sup></div>
+            <div class="col-5 text-center"><a href="https://www.cs.toronto.edu/~fidler/">Sanja Fidler</a><sup>1,2,3</sup></div>
+        </div>
+
+        <div class="affil-row">
+            <div class="col-3 text-center"><sup>1</sup> NVIDIA</a></div>
+            <div class="col-3 text-center"><sup>2</sup> University of Toronto</div>
+            <div class="col-3 text-center"><sup>3</sup> Vector Institute</div>
+        </div>
+        <div class="affil-row">
+            <div class="venue text-center"><b>ECCV 2022</b></div>
+        </div>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="supp-btn" href="assets/outdoor22_paper.pdf">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <a class="supp-btn" href="assets/outdoor22_supp.pdf">
+                <span class="material-icons"> description </span> 
+                 Supp PDF
+            </a>
+            <a class="supp-btn" href="assets/outdoor22_supp.mp4">
+                <span class="material-icons"> description </span> 
+                 Supp Video
+            </a>
+            <!-- <a class="supp-btn" href="http://arxiv.org/abs/2109.06061">
+                <span class="material-icons"> description </span> 
+                 arXiv
+            </a> -->
+            <a class="supp-btn" href="assets/outdoor22_bib.txt">
+                <span class="material-icons"> description </span> 
+                 BibTeX
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="teaser-videos">
+        <div class="flex-row" onmouseout="drivear_stop()" onmouseover="drivear_start()" style="line-height: -10">
+            <figure style="width: 33%; float: left">
+                <div class="one">
+                    <div class="two" id='car1_b'>
+                        <img src='results/car1_b.jpg' width="100%">
+                    </div>
+                    <img src='results/car1.jpg' width="100%">
+                </div>
+            </figure>
+            <figure style="width: 33%; float: left">
+                <div class="one">
+                    <div class="two" id='dog1_b'>
+                        <img src='results/dog1_b.jpg' width="100%">
+                    </div>
+                    <img src='results/dog1.jpg' width="100%">
+                </div>
+            </figure>
+            <figure style="width: 33%; float: left">
+                <div class="one">
+                    <div class="two" id='heavy2_b'>
+                        <img src='results/heavy2_b.jpg' width="100%">
+                    </div>
+                    <img src='results/heavy2.jpg' width="100%">
+                </div>
+            </figure>
+            <figure style="width: 33%; float: left; margin-top: -8px;">
+                <div class="one">
+                    <div class="two" id='garbage4_b'>
+                        <img src='results/garbage4_b.jpg' width="100%">
+                    </div>
+                    <img src='results/garbage4.jpg' width="100%">
+                </div>
+            </figure>
+            <figure style="width: 33%; float: left; margin-top: -8px;">
+                <div class="one">
+                    <div class="two" id='debris2_b'>
+                        <img src='results/debris2_b.jpg' width="100%">
+                    </div>
+                    <img src='results/debris2.jpg' width="100%">
+                </div>
+            </figure>
+            <figure style="width: 33%; float: left; margin-top: -8px;">
+                <div class="one">
+                    <div class="two" id='car2_b'>
+                        <img src='results/car2_b.jpg' width="100%">
+                    </div>
+                    <img src='results/car2.jpg' width="100%">
+                </div>
+            </figure>
+            <script type="text/javascript">
+                function drivear_start() {
+                  document.getElementById('car1_b').style.opacity = "1";
+                  document.getElementById('dog1_b').style.opacity = "1";
+                  document.getElementById('heavy2_b').style.opacity = "1";
+                  document.getElementById('garbage4_b').style.opacity = "1";
+                  document.getElementById('debris2_b').style.opacity = "1";
+                  document.getElementById('car2_b').style.opacity = "1";
+                }
+                function drivear_stop() {
+                  document.getElementById('car1_b').style.opacity = "0";
+                  document.getElementById('dog1_b').style.opacity = "0";
+                  document.getElementById('heavy2_b').style.opacity = "0";
+                  document.getElementById('garbage4_b').style.opacity = "0";
+                  document.getElementById('debris2_b').style.opacity = "0";
+                  document.getElementById('car2_b').style.opacity = "0";
+                }
+                drivear_stop()
+            </script>
+            <p class="caption" style="margin-bottom: 1px;">
+            Our model aims to estimate scene lighting given a single image as input, enabling photorealistic virtual object insertion into photographs. 
+            </p>
+        </div>
+    </section>
+
+    <section id="abstract"/>
+        <h2>Abstract</h2>
+        <hr>
+        <p>We consider the challenging problem of outdoor lighting estimation for the goal of photorealistic virtual object insertion into photographs. Existing works on outdoor lighting estimation typically simplify the scene lighting into an environment map which cannot capture the spatially-varying lighting effects in outdoor scenes. In this work, we propose a neural approach that estimates the 5D HDR light field from a single image, and a differentiable object insertion formulation that enables end-to-end training with image-based losses that encourage realism. Specifically, we design a hybrid lighting representation tailored to outdoor scenes, which contains an HDR sky dome that handles the extreme intensity of the sun, and a volumetric lighting representation that models the spatially-varying appearance of the surrounding scene. With the estimated lighting, our shadow-aware object insertion is fully differentiable, which enables adversarial training over the composited image to provide additional supervisory signal to the lighting prediction. We experimentally demonstrate that our hybrid lighting representation is more performant than existing outdoor lighting estimation methods. We further show the benefits of our AR object insertion in an autonomous driving application, where we obtain performance gains for a 3D object detector when trained on our augmented data. 
+        </p>
+
+        <figure style="width: 100%;">
+            <a>
+                <img width="100%" src="assets/model_sketch.jpg" style="margin-bottom: -5px;">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+            <strong>Model overview.</strong>
+            Tailored for outdoor street scenes, our monocular lighting estimation model (a) predicts a hybrid lighting representation containing an HDR sky dome (top) representing sky and sun at infinity, and a lighting volume (bottom) representing the surrounding scene. 
+            With the predicted lighting, our object insertion module (b) renders a 3D asset into a given image and is fully differentiable w.r.t. lighting parameters. 
+            In addition to direct supervision signals from datasets, we apply a discriminator on the final editing result, enabling end-to-end training with adversarial objective for photorealism.
+            </p>
+        </figure>
+
+        <!-- <figure style="width: 100%; float: center">
+            <a>
+                <img width="90%" src="assets/model.png" class="centered">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+            Specifically, our model consists of 4 submodules (a-d). <strong>Direct Prediction Module (a)</strong> takes a single image as input and jointly predicts initial guess of intrinsic properties. <strong>Lighting Joint Prediction Module (b)</strong> consumes the initial prediction and predicts a 3D lighting volume. 
+            Then, we employ a physics-based <strong>Differentiable Re-rendering Module (c)</strong> to re-render and enforce the consistency with the input image. 
+            Finally, <strong>Joint Re-prediction Module (d)</strong> jointly refines the initial prediction.
+            </p>
+        </figure>
+ -->
+    </section>
+
+    <section id="results">
+        <h2>Results</h2>
+        <hr>
+        <figure style="width: 100%;">
+            <img width="100%" src="assets/light_qualitative.png">
+            <p class="caption" style="margin-bottom: 3px;">
+            <strong> Qualitative comparison of lighting estimation.</strong> 
+            We insert a purely specular sphere into the image to visualize the lighting prediction, and display the environment maps on the bottom. 
+            Our method can recover both correct shadows and the high-frequency spatially-varying effects. 
+            </p>
+        </figure>
+        <br>
+        <figure style="width: 100%;">
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/multiview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="caption" style="margin-bottom: 3px;">
+            <strong> Object Insertion in Driving Sequences.</strong> 
+            With the estimated lighting, we insert virtual objects simultaneously into six surrounding cameras, following the nuScenes camera rig. Our method produces realistic editing results, and is able to composite rarely captured but safety-critical scenarios. 
+            </p>
+        </figure>
+        <br>
+        <figure style="width: 100%;">
+            <a>
+                <img width="100%" src="assets/downstream_qualitative.png">
+                <img width="100%" src="assets/downstream_quantitative.png">
+            </a>
+            <p class="caption" style="margin-bottom: 3px;">
+            <strong> Application for Downstream Perception Task. </strong> 
+            We apply our object insertion approach as a data augmentation for the task of 3D object detection on nuScenes dataset. Specifically, we collect a set of high-quality 3D assets, do object insertion with our method, and use the 3D bounding box of the virtually inserted objects as additional training data. 
+            Compared to a state-of-the-art monocular 3D detector on a 10% subset of real data, naively adding objects leads to a 1% improvement, and another 1% is a result of having better light estimation. 
+            </p>
+        </figure>
+    </section>
+
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@inproceedings{wang2022neural,
+title = {Neural Light Field Estimation for Street Scenes with Differentiable Virtual Object Insertion}, 
+author = {Zian Wang and Wenzheng Chen and David Acuna and Jan Kautz and Sanja Fidler},
+booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+year = {2022}
+}
+</code></pre>
+    </section>
+
+    
+    <section id="paper">
+        <h2>Paper</h2>
+        <hr>
+        <div class="flex-row">
+            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
+                <a href="assets/invrend21_paper.pdf"><img class="screenshot" src="assets/paper_preview.jpg"></a>
+            </div>
+            <div style="width: 55%">
+                <p><b>Neural Light Field Estimation for Street Scenes with Differentiable Virtual Object Insertion</b></p>
+                <p>Zian Wang, Wenzheng Chen, David Acuna, Jan Kautz, Sanja Fidler</p>
+                <div><span class="material-icons"> description </span><a href="assets/outdoor22_paper.pdf"> Paper </a></div>
+                <div><span class="material-icons"> description </span><a href="assets/outdoor22_supp.pdf"> Supp PDF </a></div>
+                <div><span class="material-icons"> description </span><a href="assets/outdoor22_supp.mp4"> Supp Video </a></div>
+                <div><span class="material-icons"> insert_comment </span><a href="assets/outdoor22_bib.txt"> BibTeX</a></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
+
+
